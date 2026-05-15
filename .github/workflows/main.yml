@@ -58,5 +58,5 @@ jobs:
           docker run -d \
             --pull always \
             --name react-app \
-            -p 80:80 \
+            -p 3000:3000 \
             ${{ secrets.DOCKER_USERNAME }}/aulagha:latest
