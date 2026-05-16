@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import store from '../store/store'
 
 const HomePage = props => {
+  const {user} = store();
   return (
     <div>
         <nav>
             <span>
-                 nome <img src={""} />
+                 {user.nome} <img width={50} src={user.imagem} />
             </span>
         </nav>
         HomePage

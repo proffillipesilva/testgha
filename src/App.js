@@ -9,14 +9,19 @@ import { BrowserRouter as Router,
  } from 'react-router-dom';
 import LoginPage from './login/LoginPage';
 import HomePage from './home/HomePage';
+import store from './store/store';
 
 function App() {
+  const {user} = store();
   return (
     <Router>
     <div className="App">
       <Routes>
+        {user == null ? 
         <Route index element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
+        :
+        <Route index element={<HomePage />} />
+        }
       </Routes>
     </div>
     </Router>

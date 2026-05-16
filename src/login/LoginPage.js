@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom'
 import loginService from './services/loginService'
+import store from '../store/store'
 
 const LoginPage = props => {
+  const {setUser} = store()
   const navigate = useNavigate()
   const login = async (e) => {
     e.preventDefault(); // pra nao recarregar
@@ -13,8 +15,10 @@ const LoginPage = props => {
             "123456"
     )
     console.log(data);
+    // passo o token para o estado
+    setUser(data.token)
 
-    navigate("/home") // para ir pra rota home
+    navigate("/") // para ir pra rota home
   }
   return (
     <div>
