@@ -9,4 +9,13 @@ const login = async (email, password) => {
     return res.data;
 }
 
-export default { login }
+const cadastro = async (email, password, nome, imagem) => {
+    const res = await axios.post
+    (
+        "http://10.5.36.41:38000/signUp2",
+         {email, password, nome, imagem}
+    )
+    return res.data;
+}
+
+export default { login, cadastro }
