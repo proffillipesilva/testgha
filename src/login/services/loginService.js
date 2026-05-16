@@ -18,4 +18,6 @@ const cadastro = async (email, password, nome, imagem) => {
     return res.data;
 }
 
-export default { login, cadastro }
+const loginService = { login, cadastro }
+
+export default loginService;
