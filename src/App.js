@@ -1,7 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import Ana from './Ana';
-import Luana from './Luana';
 import { BrowserRouter as Router,
   Route,
   Routes
