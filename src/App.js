@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Ana from './Ana';
+import Luana from './Luana';
+import { BrowserRouter as Router,
+  Route,
+  Routes
+
+ } from 'react-router-dom';
+import LoginPage from './login/LoginPage';
+import HomePage from './home/HomePage';
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Github Action na Fiec
-        </a>
-      </header>
+      <Routes>
+        <Route index element={<LoginPage />} />
+        <Route path="/home" element={<HomePage />} />
+      </Routes>
     </div>
+    </Router>
   );
 }
 
