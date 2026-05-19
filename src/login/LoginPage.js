@@ -46,7 +46,7 @@ const LoginPage = props => {
 
     return (
         <div>
-            <div className="text-3xl font-bold text-blue-600 ">Página de Login</div>
+            <div className="text-3xl font-bold text-blue-600 ">FIEC PORTAS ABERTAS</div>
             <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
                 <div className="w-full max-w-md space-y-8 rounded-2xl bg-white p-8 shadow-xl border border-gray-100">
                     <div>
